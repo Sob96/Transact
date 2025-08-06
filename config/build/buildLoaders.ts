@@ -13,6 +13,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
          options: {
           modules: {
             namedExport: false,
+            localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
           },
         },
       },
